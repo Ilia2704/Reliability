@@ -21,7 +21,7 @@ The algorithm for forming a table with the results of calculations is implemente
 3.2 Processing of the positional designation.
 
 
- For stroka = 1 To RazmerP  
+    For stroka = 1 To RazmerP  
     Obozn1 = 0
     obozn3 = 0
     obozn2 = 0
@@ -54,7 +54,7 @@ The algorithm for forming a table with the results of calculations is implemente
 
 3.3.2 Memorizing the line number in which the elements match. If the element is not found in the directory, then the value of the variable line number is assigned to the value of the second line, on which the value of the string variable "Element is not found" is placed in the directory in advance.
 
- For strokaSS = 2 To RazmerS ' Цикл на заранее определенное длинной справочника число итераций
+    For strokaSS = 2 To RazmerS ' Цикл на заранее определенное длинной справочника число итераций
         'Проверка вхождения названия элемента из справочника в название элемента в перечне:
         If InStr(1, Worksheets(List).Cells(stroka + 2, 8).Value, Worksheets(SList).Cells(strokaSS, 2).Value) > 0 Then
         Pos = strokaSS 'Запоминание номера строки справочника, в которой найден искомый элемент
@@ -67,7 +67,7 @@ The algorithm for forming a table with the results of calculations is implemente
 
 It should be noted here that the found match in the directory should be recorded as many times as the elements of the current given type are listed in the list of elements. This quantity is expressed as the number of elements of this type and is indicated by a specific number. In addition, the next element should be recorded on the last free line. To do this, a counter of "free rows" is entered.
 
- For strokain = Numb + 1 To Kolv + Numb
+    For strokain = Numb + 1 To Kolv + Numb
        oboznach = Bukva & strokain + zifir - Numb - 1 'Формирование обозначения
        Worksheets(Nlist).Cells(strokain + 1, 1).Value = oboznach ' Обозначение элемента
       If Pos = 2 Then
