@@ -17,6 +17,8 @@ The algorithm for forming a table with the results of calculations is implemente
 3. Starting the cycle of iterating through the list of elements. This loop processes one row of the list of elements in one iteration. The length of the list was previously determined. Determination of the number of elements of this current name. The quantity value is taken from the list of elements. Processing of the positional designation.
 
 code:
+
+
     For stroka = 1 To RazmerP  
     Obozn1 = 0
     obozn3 = 0
