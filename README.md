@@ -9,15 +9,19 @@ The list of elements includes the necessary fields: positional designation, elem
 ![image](https://user-images.githubusercontent.com/111389991/226731323-bb2b45b9-cd14-4ad7-8eb9-8fc3a88ccfdb.png)
 
 The algorithm for forming a table with the results of calculations is implemented in the MS VBA programming environment and includes the following steps:
-1. Creating a template table with the results of the reliability calculation.
-2. Determination of the length of the initial list of elements, the length of the reference book and the length of the results table.
-3. Starting the cycle of iterating through the list of elements. This loop processes one row of the list of elements in one iteration. The length of the list was previously determined.
-3.1 Determination of the number of elements of this current name. The quantity value is taken from the list of elements.
-3.2 Processing of the positional designation.
-![image](https://user-images.githubusercontent.com/111389991/226732274-ee03c7f9-87a6-4be4-9556-a279883c34a7.png)
 
- For stroka = 1 To RazmerP
-    
+1. Creating a template table with the results of the reliability calculation.
+ 
+2. Determination of the length of the initial list of elements, the length of the reference book and the length of the results table.
+
+3. Starting the cycle of iterating through the list of elements. This loop processes one row of the list of elements in one iteration. The length of the list was previously determined.
+
+3.1 Determination of the number of elements of this current name. The quantity value is taken from the list of elements.
+
+3.2 Processing of the positional designation.
+
+
+ For stroka = 1 To RazmerP  
     Obozn1 = 0
     obozn3 = 0
     obozn2 = 0
@@ -43,6 +47,9 @@ The algorithm for forming a table with the results of calculations is implemente
      zifir = Right(obozn2, Len(obozn2) - i) * 1 'За число в обозначении принимается все кроме букв
      Bukva = Left(obozn2, i) ' При формировании позиционного обозначения значения буквы объединяются со значением цифры + номер строки
      
+
 3.3 Starting the directory search cycle. The number of iterations of this cycle is determined by the length of the directory.
+
 3.3.1 Comparison of the directory line with the name of the list item.
+
 3.3.2 Memorizing the line number in which the elements match. If the element is not found in the directory, then the value of the variable line number is assigned to the value of the second line, on which the value of the string variable "Element is not found" is placed in the directory in advance.
