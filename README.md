@@ -14,11 +14,7 @@ The algorithm for forming a table with the results of calculations is implemente
  
 2. Determination of the length of the initial list of elements, the length of the reference book and the length of the results table.
 
-3. Starting the cycle of iterating through the list of elements. This loop processes one row of the list of elements in one iteration. The length of the list was previously determined.
-
-3.1 Determination of the number of elements of this current name. The quantity value is taken from the list of elements.
-
-3.2 Processing of the positional designation.
+3. Starting the cycle of iterating through the list of elements. This loop processes one row of the list of elements in one iteration. The length of the list was previously determined. Determination of the number of elements of this current name. The quantity value is taken from the list of elements. Processing of the positional designation.
 
 
     For stroka = 1 To RazmerP  
@@ -48,11 +44,7 @@ The algorithm for forming a table with the results of calculations is implemente
      Bukva = Left(obozn2, i) ' При формировании позиционного обозначения значения буквы объединяются со значением цифры + номер строки
      
 
-3.3 Starting the directory search cycle. The number of iterations of this cycle is determined by the length of the directory.
-
-3.3.1 Comparison of the directory line with the name of the list item.
-
-3.3.2 Memorizing the line number in which the elements match. If the element is not found in the directory, then the value of the variable line number is assigned to the value of the second line, on which the value of the string variable "Element is not found" is placed in the directory in advance.
+Starting the directory search cycle. The number of iterations of this cycle is determined by the length of the directory. Comparison of the directory line with the name of the list item. Memorizing the line number in which the elements match. If the element is not found in the directory, then the value of the variable line number is assigned to the value of the second line, on which the value of the string variable "Element is not found" is placed in the directory in advance.
 
     For strokaSS = 2 To RazmerS ' Цикл на заранее определенное длинной справочника число итераций
         'Проверка вхождения названия элемента из справочника в название элемента в перечне:
@@ -63,7 +55,7 @@ The algorithm for forming a table with the results of calculations is implemente
         End If
       Next strokaSS
 
-3.4 Starting the cycle of recording the found element in the table with the results of calculations.
+Starting the cycle of recording the found element in the table with the results of calculations.
 
 It should be noted here that the found match in the directory should be recorded as many times as the elements of the current given type are listed in the list of elements. This quantity is expressed as the number of elements of this type and is indicated by a specific number. In addition, the next element should be recorded on the last free line. To do this, a counter of "free rows" is entered.
 
@@ -102,16 +94,6 @@ To form such a table from the reliability calculation results table , it is nece
 
 2. Transfer the values of the elements of the reliability calculation results table to the fields of the application table
 
-3. Start the cycle of iterating through the application table. 
-
-3.1 Compare the current element with each of the following elements and write such an element with all the values of the fields of the current row to the end of the table. 
-
-3.2 Write the positions of the found elements to the service string variable.
-
-3.3 Increase the counter of the number of elements of the found type by one point. 
-
-3.4 Delete the values of the names of elements not only from the found elements, but also from the current one. At the same time, the line itself remains. 
-
-3.5 Assign the values of service variables to the quantity and positional designation fields for each element, respectively. 
+3. Start the cycle of iterating through the application table. Compare the current element with each of the following elements and write such an element with all the values of the fields of the current row to the end of the table. Write the positions of the found elements to the service string variable. Increase the counter of the number of elements of the found type by one point. Delete the values of the names of elements not only from the found elements, but also from the current one. At the same time, the line itself remains. Assign the values of service variables to the quantity and positional designation fields for each element, respectively. 
 
 4. Start a cycle during which every line containing an empty name is deleted
