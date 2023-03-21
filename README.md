@@ -1,9 +1,13 @@
 # Reliability
 
   The algorithm assumes the presence of a list of elements of a separate block formed by the designer, which can be obtained from the PDM system; and a reference book containing a list of elements, reliability indicators and correction coefficients for which were previously obtained. The format of the list of elements and the format of the reference book are shown
+  
   ![image](https://user-images.githubusercontent.com/111389991/226730845-b57832e5-8acb-4075-a40d-70bcb7c40baf.png)
+  
 The list of elements includes the necessary fields: positional designation, element name and quantity.
+
 ![image](https://user-images.githubusercontent.com/111389991/226731323-bb2b45b9-cd14-4ad7-8eb9-8fc3a88ccfdb.png)
+
 The algorithm for forming a table with the results of calculations is implemented in the MS VBA programming environment and includes the following steps:
 1. Creating a template table with the results of the reliability calculation.
 2. Determination of the length of the initial list of elements, the length of the reference book and the length of the results table.
